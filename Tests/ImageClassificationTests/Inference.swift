@@ -367,7 +367,7 @@ final class ImageClassificationInferenceTests: XCTestCase {
     func testXception() {
         // ImageNet size
         let inputImageNet = Tensor<Float>(
-            randomNormal: [1, 224, 224, 3], mean: Tensor<Float>(0.5),
+            randomNormal: [1, 299, 299, 3], mean: Tensor<Float>(0.5),
             standardDeviation: Tensor<Float>(0.1), seed: (0xffeffe, 0xfffe))
         let xception = Xception(classCount: 1000)
         let xceptionResult = xception(inputImageNet)
